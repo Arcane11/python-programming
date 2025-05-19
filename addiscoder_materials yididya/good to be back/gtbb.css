@@ -1,0 +1,18 @@
+* {
+    background-color: aliceblue;
+    font-size: larger;
+    font-family: monospace;
+    align-items: center;
+    
+}
+input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+form {
+    align-items: center;
+    display: block;
+    font-size: large;
+    justify-content: space-between;
+    display: flex;
+}
