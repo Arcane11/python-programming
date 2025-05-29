@@ -563,3 +563,74 @@ import random
 # print(final)
 
 
+####################################################  sum_of_diagonals_of_matrix (if the matrix is already given)
+
+# a = 5
+# sum = -1
+# array1 = [[21, 22, 23, 24, 25],
+# [20,  7,  8,  9, 10],
+# [19,  6,  1,  2, 11],
+# [18,  5,  4,  3, 12],
+# [17, 16, 15, 14, 13]]
+# for i in range(a):
+#     sum += array1[i][i]
+#     sum += array1[i][-(i+1)]
+# print(sum)
+
+##################################################diagonal addition of spiral .
+
+# a = int(input("enter the number you want to start with...."))
+# even_or_odd  = final_sum  = a % 2
+# while a-even_or_odd:
+#     diagonal1 = (a**2)-((a-1))
+#     diagonal2 = a**2
+#     diagonal3 = a**2 - 2*(a-1)
+#     diagonal4 = (a-1)**2 - (a-2)
+#     final_sum += diagonal1 + diagonal2 +diagonal3 +diagonal4 
+#     a-=2
+# print(final_sum)
+
+
+
+n = 100
+arr = []
+for i in range(2, n):
+    even = x = i + 1 if i % 2 else i
+    odd =  i  if i % 2 else i + 1
+    f_even = 0
+    f_odd = 0
+    exp = 0
+    while True:
+        if x % 2 == 0:
+            x = x // 2
+            exp += 1
+        elif x == 1:
+            f_even = exp + 1
+            break
+        else:
+            break
+    count1 = 0
+    if x != 1:
+        for j in range(1, x , 2):
+            y =  x // j
+            if x % j == 0 and y > j:
+                count1 += 2
+            elif x % j == 0 and y == j:
+                count1 += 1
+            elif y < j:
+                break
+        f_even = count1* (1 + (2 ** (exp - 1)))
+    count2 = 0
+    z = odd
+    for j in range(1, odd + 1, 2):
+        z = odd // j   
+        if odd % j == 0 and z > j:
+            count2 += 2
+        elif odd % j == 0 and z == j:
+            count2 += 1
+        elif z < j:
+            break  
+    f_odd = count2
+    if f_even == f_odd:
+        arr.append([i, i+1])
+print(arr)

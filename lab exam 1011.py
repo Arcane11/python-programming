@@ -55,9 +55,9 @@
 
 #question number 5
 
-n = int(input("enter a number"))
-for i in range(0,n):
-    for j in range(0,n):
-        print(f" {(i+1)*(j+1)}" ,end="")
-    print()
+# n = 5  #int(input("enter a number"))
+# for i in range(1,n+1):
+#     for j in range(1,n+1):
+#         print(f" {i*j}" ,end="")
+#     print()
 
