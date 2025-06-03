@@ -160,45 +160,47 @@
     
 ############## number of elements that are n and n + 1 that have equal number of divisors.
 
-arr = []
-for i in range(2, 10000):
-    even = x = i + 1 if i % 2 else i
-    odd =  i  if i % 2 else i + 1
-    f_even = 0
-    f_odd = 0
-    exp = 0
-    while True:
-        if x % 2 == 0:
-            x = x // 2
-            exp += 1
-        elif x == 1:
-            f_even = exp + 1
-            break
-        else:
-            break
-    count1 = 0
-    if x != 1:
-        for j in range(1, x , 2):
-            y =  x // j
-            if x % j == 0 and y > j:
-                count1 += 2
-            elif x % j == 0 and y == j:
-                count1 += 1
-            elif y < j:
-                break
-        f_even = count1* (1 + exp)
-    count2 = 0
-    z = odd
-    for j in range(1, odd + 1, 2):
-        z = odd // j   
-        if odd % j == 0 and z > j:
-            count2 += 2
-        elif odd % j == 0 and z == j:
-            count2 += 1
-        elif z < j:
-            break  
-    f_odd = count2
-    if f_even == f_odd:
-        arr.append([i, i+1])
-print(len(arr))
-# print(arr)
+# arr = []
+# for i in range(2, 10000):
+#     even = x = i + 1 if i % 2 else i
+#     odd =  i  if i % 2 else i + 1
+#     f_even = 0
+#     f_odd = 0
+#     exp = 0
+#     while True:
+#         if x % 2 == 0:
+#             x = x // 2
+#             exp += 1
+#         elif x == 1:
+#             f_even = exp + 1
+#             break
+#         else:
+#             break
+#     count1 = 0
+#     if x != 1:
+#         for j in range(1, x , 2):
+#             y =  x // j
+#             if x % j == 0 and y > j:
+#                 count1 += 2
+#             elif x % j == 0 and y == j:
+#                 count1 += 1
+#             elif y < j:
+#                 break
+#         f_even = count1* (1 + exp)
+#     count2 = 0
+#     z = odd
+#     for j in range(1, odd + 1, 2):
+#         z = odd // j   
+#         if odd % j == 0 and z > j:
+#             count2 += 2
+#         elif odd % j == 0 and z == j:
+#             count2 += 1
+#         elif z < j:
+#             break  
+#     f_odd = count2
+#     if f_even == f_odd:
+#         arr.append([i, i+1])
+# print(len(arr))
+# # print(arr)
+
+    
